@@ -8,7 +8,7 @@ const port = 3000;
 app.use(express.json());
 
 //app.use(express.static('./public'))
-app.use('/api/v1/task', tasks)
+app.use('/api/v1/tasks', tasks)
 
 
 app.listen(port, ()=> {

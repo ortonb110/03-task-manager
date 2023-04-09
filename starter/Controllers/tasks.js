@@ -5,12 +5,12 @@ const getAllTasks = (req, res) => {
 }
 
 const createTask = (req, res)=> {
-    res.status(200).json({success: true, msg: "Posted"});
+    res.json(req.body);
 }
 
 
 const getSingleTask = (req, res)=> {
-    res.send("Getting single task");
+    res.json({id: req.params.id});
 }
 
 
@@ -18,8 +18,9 @@ const updateTask = (req, res) => {
     res.send("Updating task");
 }
 const deleteTask = (req, res) => {
-    res.send("Updating task");
+    res.send("Delete task");
 }
+
 
 
 
