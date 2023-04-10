@@ -1,1 +1,14 @@
-const connectionString = "mongodb+srv://bright:<password>@nodeandexpress.ra6cdhe.mongodb.net/NodeAndExpress?retryWrites=true&w=majority";
+const mongoose = require('mongoose');
+
+const connectDB = (url) => {
+    return mongoose.connect(url, {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true,
+    })
+}
+
+
+
+module.exports = connectDB;
